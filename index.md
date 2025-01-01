@@ -1,2 +1,2 @@
 ### The best network of games for bedrock
-![Image not found.](https://oceanverse.github.io/logo.png "Logo")
+![Image not found.](https://oceanverse.github.io/logo.png)
