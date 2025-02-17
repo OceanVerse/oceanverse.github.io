@@ -1,223 +1,77 @@
-MADE WITH ovAI-htmlMaker
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luminescent Network</title>
-    <link rel="icon" href="ln.png"> <!-- Title image -->
+    <title>My Website</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        body {
             font-family: Arial, sans-serif;
         }
-        
-        html, body {
-            height: 100%; 
-            overflow: auto; 
-        }
-        
-        body {
-            background-color: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 0 20px; 
-        }
-        
-       
-        ::-webkit-scrollbar {
-            display: none; 
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: transparent;
-        }
-        
-        
-        .navbar {
-            position: fixed;
+        .header {
+            position: sticky;
             top: 0;
             width: 100%;
-            background: rgba(30, 30, 30, 0.7);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav-links {
             display: flex;
             justify-content: center;
             gap: 20px;
-            z-index: 1000;
-        }
-        
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px 15px;
-            transition: 0.3s;
-        }
-        
-        .navbar a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-        }
-        
-       
-        header {
-            margin-top: 80px; 
-        }
-        
-        header img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        
-        .carousel-container {
-            width: 100%;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-        
-        .carousel {
-            display: flex;
-            width: 400%; 
-            animation: scroll 20s infinite linear;
-        }
-        
-        .carousel img {
-            width: 100vw;
-            height: auto;
-            object-fit: cover;
-        }
-        
-        @keyframes scroll {
-            0% { transform: translateX(0); } 
-            25% { transform: translateX(0); }
-            30% { transform: translateX(-100vw); }
-            55% { transform: translateX(-100vw); } 
-            60% { transform: translateX(-200vw); }
-            85% { transform: translateX(-200vw); } 
-            90% { transform: translateX(-300vw); } 
-            100% { transform: translateX(-300vw); } 
-        }
-        
-        .discord-page {
-            display: flex;
-            justify-content: space-between;
-            padding: 40px 20px; 
-            margin-top: 20px;
-            flex-wrap: wrap; 
-            background: linear-gradient(rgba(26, 26, 26, 1), rgba(26, 26, 26, 0.8)), url('5.png') center/cover no-repeat; 
-            background-size: cover;
-            min-height: 100vh;
-            filter: blur(0px);
-        }
-        
-        .left-side {
-            flex: 1;
-            padding-right: 20px;
-            text-align: left;
-            background: rgba(255, 255, 255, 0.1); 
-            padding: 20px;
-            border-radius: 10px; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-            margin-right: 20px; 
-        }
-        
-        .right-side {
-            flex: 1;
-            display: flex;
-            justify-content: flex-start; 
-            align-items: center;
-            margin-top: 20px; 
-            margin-left: 20px; 
-        }
-        
-        .discord-invite-btn {
-            display: inline-block;
-            padding: 50px 80px; 
-            background-color: #7289DA; 
-            color: white;
-            font-size: 32px; 
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 15px; 
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); 
-            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, scale 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 500px; 
-            height: 120px; 
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .discord-invite-btn:hover {
-            background-color: #5c6bc0; 
-            transform: translateY(-5px) scale(1.1); 
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); 
-        }
-        
-        .discord-invite-btn:active {
-            background-color: #4a5bb4;
-            transform: translateY(3px) scale(1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
-        }
-        
-        .discord-invite-btn img {
-            margin-right: 25px; 
-            width: 50px;
-            border-radius: 10px; 
-        }
-        
-        .discord-invite-banner {
-            width: 100%;
-            height: 120px;
-            background-image: url('ln.png'); 
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px 10px 0 0;
             margin-bottom: 20px;
         }
-        
-        .discord-image {
-            display: none;
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: #555;
+            border-radius: 5px;
         }
-        
-        footer {
-            margin-top: 30px;
-            padding: 20px;
-            background: #0f0f0f;
+        .carousel {
+            display: flex;
+            overflow: auto;
+            gap: 10px;
+            margin: 20px 0;
         }
-        
-        audio {
-            display: none;
+        .carousel img {
+            height: 200px;
+            border-radius: 5px;
+        }
+        .credits {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .credits img {
+            height: 50px;
+            border-radius: 50%;
+            margin: 5px;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_M8TPysEcmyGIYTqtLuSY80REuboMwj4nB9t4JenSgTZAIQ/viewform">Apply</a>
-        <a href="discord.html">Discord</a>
-    </nav>
-
-    <header>
-        <img src="logo.png" alt="OceanVerse">
-    </header>
-    <div class="carousel-container">
-        <div class="carousel">
-            <img src="1.png" alt="Image 1">
-            <img src="2.png" alt="Image 2">
-            <img src="3.png" alt="Image 3">
-            <img src="favicon.png" alt="Image 4">
+    <div class="header">
+        <div class="nav-links">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
         </div>
+        <img src="header-image.jpg" alt="Header Image">
     </div>
-    <footer>
-        <p>ovAI:htmler / ovAI-htmlMaker</p>
-    </footer>
+
+    <div class="carousel">
+        <img src="carousel-image1.jpg" alt="Carousel Image 1">
+        <img src="carousel-image2.jpg" alt="Carousel Image 2">
+        <img src="carousel-image3.jpg" alt="Carousel Image 3">
+    </div>
+
+    <div class="credits">
+        <h3>Credits</h3>
+        <img src="credit1.jpg" alt="Credit 1">
+        <img src="credit2.jpg" alt="Credit 2">
+        <img src="credit3.jpg" alt="Credit 3">
+    </div>
 </body>
 </html>
